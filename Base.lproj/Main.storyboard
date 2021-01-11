@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" rowHeight="100" id="cz6-oJ-zkm" userLabel="ArticleCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" rowHeight="100" id="cz6-oJ-zkm" userLabel="ArticleCell" customClass="ArticleCell" customModule="newsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cz6-oJ-zkm" id="Q0C-3P-Hlz">
@@ -33,7 +33,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HM8-bd-YTp">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HM8-bd-YTp">
                                                     <rect key="frame" x="290" y="0.0" width="124" height="100"/>
                                                 </imageView>
                                             </subviews>
@@ -50,6 +50,10 @@
                                             <constraint firstItem="S6j-yx-wry" firstAttribute="width" secondItem="cz6-oJ-zkm" secondAttribute="width" multiplier="0.7" constant="-40" id="eAX-9g-Kuj"/>
                                             <constraint firstItem="HM8-bd-YTp" firstAttribute="width" secondItem="cz6-oJ-zkm" secondAttribute="width" multiplier="0.3" id="qeB-Kg-KS2"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="articleImageView" destination="HM8-bd-YTp" id="hKg-2d-5y7"/>
+                                            <outlet property="headlineLabel" destination="S6j-yx-wry" id="UtR-zu-WkT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
