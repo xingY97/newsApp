@@ -25,6 +25,26 @@ class ViewController: UIViewController {
         model.delegate = self
         model.getArticles()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //Detect the indexpath the user selected
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        guard indexPath != nil else {
+            //The user hasn't selected anything
+            return
+        }
+        
+        //Get the article the user tapped on
+        let article = articles[indexPath!.row]
+        
+        //Get a refrence to a detail view controller
+        let detailVC = segue.destination as! DetailViewController
+        
+        //Pass the article url to the detail view controller
+        detailVC.articleUrl = article.url!
+    }
 
 }
 
